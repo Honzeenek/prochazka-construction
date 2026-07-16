@@ -7,7 +7,7 @@ vi.mock('next/navigation', () => ({ usePathname: () => '/' }));
 describe('Home', () => {
   it('renders the real hero headline and the three services', () => {
     render(<Home />);
-    expect(screen.getByRole('heading', { level: 1, name: /Po nás zůstane jen dobře odvedená práce/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: /Stavíme pořádně/i })).toBeInTheDocument();
     expect(screen.getByText('Zemní práce')).toBeInTheDocument();
     expect(screen.getByText('Stavební práce')).toBeInTheDocument();
     expect(screen.getByText('Pronájem kontejneru')).toBeInTheDocument();

@@ -40,7 +40,7 @@ export default function Home() {
           <HeroBadge />
           <div className={styles.heroInner}>
             <div className={styles.heroOverline}><span className={styles.heroMarker} />{site.tagline}</div>
-            <h1 className={styles.heroTitle}>{site.heroTitle}</h1>
+            <h1 className={styles.heroTitle}>Stavíme pořádně.<br />A&nbsp;se&nbsp;srdcem.</h1>
             <p className={styles.heroLead}>{site.heroLead}</p>
             <div className={styles.heroActions}>
               <Button href="/kontakt" size="lg">Nezávazná poptávka</Button>

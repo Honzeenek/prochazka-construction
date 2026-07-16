@@ -9,8 +9,7 @@ export const site = {
   projectsDone: '1 800+',
   responsePromise: 'Ozveme se vám nejpozději druhý pracovní den.',
   values: 'Věříme, že kvalita, férovost a lidský přístup nejsou bonus, ale samozřejmost.',
-  heroTitle: 'Po nás zůstane jen dobře odvedená práce',
-  heroLead: 'Stavební a zemní práce, na které se můžete spolehnout. Každý zákazník je pro nás jedinečný — a podle toho k němu přistupujeme.',
+  heroLead: 'Stavební a zemní práce z Chřibské. Poctivá práce od výkopu po hotové dílo.',
   domain: 'https://www.stavbyprochazka.cz',
 } as const;
 

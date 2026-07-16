@@ -28,7 +28,7 @@
   color: #fff; margin-bottom: 20px;
 }
 .heroMarker { width: 8px; height: 8px; background: var(--brand); flex: none; display: inline-block; }
-.heroTitle { font-size: var(--display-xl); color: #fff; max-width: 14ch; }
+.heroTitle { font-size: clamp(40px, 5.2vw, 68px); color: #fff; letter-spacing: -0.025em; line-height: 1.04; }
 .heroLead { max-width: 46ch; margin: 22px 0 0; font-size: var(--text-lg); color: rgba(250,248,245,.82); line-height: 1.5; }
 .heroActions { display: flex; gap: 16px; align-items: center; margin-top: 34px; flex-wrap: wrap; }
 .heroGhost {

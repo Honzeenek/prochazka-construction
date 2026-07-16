@@ -16,10 +16,10 @@
   --focus-ring:var(--orange-400);
 
   /* Type — font families resolve to next/font variables (set on <html>) */
-  --font-display:var(--font-anton),"Arial Narrow",sans-serif;
+  --font-display:var(--font-display-src),"Helvetica Neue",Arial,sans-serif;
   --font-body:var(--font-hanken),"Helvetica Neue",Arial,sans-serif;
   --display-xl:clamp(56px,7vw,92px);--display-lg:clamp(40px,5vw,64px);--display-md:clamp(30px,3.5vw,44px);--display-sm:28px;
-  --display-tracking:0.005em;--display-leading:0.98;
+  --display-tracking:-0.015em;--display-leading:1.05;
   --text-lg:19px;--text-md:16px;--text-sm:14px;--text-xs:12.5px;--body-leading:1.6;
   --label-tracking:0.09em;--label-weight:700;
   --weight-regular:400;--weight-medium:500;--weight-semibold:600;--weight-bold:700;
