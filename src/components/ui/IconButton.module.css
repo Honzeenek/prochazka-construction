@@ -1,0 +1,8 @@
+.ib { border-radius: var(--radius-sm); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid transparent; transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out); }
+.primary { background: var(--brand); color: #fff; }
+.primary:hover { background: var(--brand-hover); }
+.soft { background: var(--brand-soft); color: var(--brand); }
+.soft:hover { background: var(--orange-100); }
+.outline { background: transparent; color: var(--ink-900); border-color: var(--ink-900); }
+.outline:hover { background: var(--ink-900); color: var(--text-on-ink); }
+.ib:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }

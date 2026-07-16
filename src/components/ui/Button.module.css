@@ -1,0 +1,23 @@
+.btn {
+  font-family: var(--font-body); font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  border: 1px solid transparent; border-radius: var(--radius-sm); cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none;
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+.md { font-size: 13px; padding: 12px 22px; }
+.lg { font-size: 14px; padding: 16px 30px; }
+
+.primary { background: var(--brand); color: var(--text-on-brand); }
+.primary:hover { background: var(--brand-hover); color: var(--text-on-brand); }
+.primary:active { background: var(--brand-press); }
+
+.secondary { background: transparent; color: var(--ink-900); border-color: var(--ink-900); }
+.secondary:hover { background: var(--ink-900); color: var(--text-on-ink); }
+
+.ink { background: var(--ink-900); color: var(--text-on-ink); }
+.ink:hover { background: var(--ink-700); color: var(--text-on-ink); }
+
+.ghost { background: transparent; color: var(--ink-900); text-decoration: underline; text-decoration-color: var(--orange-400); text-underline-offset: 4px; padding: 12px 4px; }
+.ghost:hover { color: var(--orange-600); }
+
+.btn:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }

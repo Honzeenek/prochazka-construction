@@ -1,0 +1,4 @@
+.badge { display: inline-flex; align-items: center; padding: 5px 12px; border-radius: var(--radius-xs); font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; font-family: var(--font-body); }
+.brand { background: var(--brand-soft); color: var(--brand-press); }
+.ink { background: var(--paper-100); color: var(--ink-700); }
+.solid { background: var(--brand); color: #fff; }
