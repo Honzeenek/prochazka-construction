@@ -1,9 +1,72 @@
-.heroWrap { padding-top: 8px; }
-.heroSheet { background: #fff; border-radius: var(--radius-xl) var(--radius-xl) 0 0; text-align: center; padding: 56px 24px 40px; }
-.heroTitle { font-size: var(--display-xl); max-width: 900px; margin: 0 auto; }
-.heroLead { max-width: 52ch; margin: 24px auto 0; font-size: var(--text-lg); color: var(--text-muted); }
-.heroActions { display: flex; gap: 14px; justify-content: center; margin-top: 32px; flex-wrap: wrap; }
-.heroPhoto { position: relative; height: 420px; border-radius: 0 0 var(--radius-xl) var(--radius-xl); overflow: hidden; }
+.heroWrap { padding-top: 8px; position: relative; }
+
+/* Full-bleed rounded hero photo with a warm dark scrim and text directly on it */
+.hero {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  min-height: 620px;
+  display: flex;
+  isolation: isolate;
+}
+.heroPhoto { position: absolute; inset: 0; z-index: 0; }
+.heroScrim {
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(20,18,16,.15) 0%, rgba(20,18,16,0) 34%),
+    linear-gradient(70deg, rgba(20,18,16,.92) 0%, rgba(20,18,16,.66) 42%, rgba(20,18,16,.12) 78%);
+}
+.heroInner {
+  position: relative; z-index: 3;
+  margin-top: auto;
+  padding: 48px clamp(28px, 5vw, 72px) 52px;
+  max-width: 760px;
+}
+.heroOverline {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: #fff; margin-bottom: 20px;
+}
+.heroMarker { width: 8px; height: 8px; background: var(--brand); flex: none; display: inline-block; }
+.heroTitle { font-size: var(--display-xl); color: #fff; max-width: 14ch; }
+.heroLead { max-width: 46ch; margin: 22px 0 0; font-size: var(--text-lg); color: rgba(250,248,245,.82); line-height: 1.5; }
+.heroActions { display: flex; gap: 16px; align-items: center; margin-top: 34px; flex-wrap: wrap; }
+.heroGhost {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--font-body); font-weight: 700; font-size: 14px; letter-spacing: .04em; text-transform: uppercase;
+  color: #fff; text-decoration: none; padding: 16px 28px;
+  border: 1px solid rgba(255,255,255,.55); border-radius: var(--radius-sm);
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+.heroGhost:hover { background: #fff; color: var(--ink-900); border-color: #fff; }
+
+/* Rotating circular badge, top-right */
+.badge {
+  position: absolute; z-index: 3;
+  top: 32px; right: 32px;
+  width: 128px; height: 128px;
+  display: grid; place-items: center;
+}
+.badgeSpin { position: absolute; inset: 0; width: 100%; height: 100%; animation: heroSpin 18s linear infinite; }
+.badgeText { font-family: var(--font-body); font-size: 8.6px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; fill: #fff; }
+.badgeArrow {
+  position: relative; z-index: 1;
+  width: 44px; height: 44px; padding: 11px;
+  color: var(--ink-900); background: var(--brand); border-radius: var(--radius-pill);
+}
+@keyframes heroSpin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .badgeSpin { animation: none; } }
+
+/* Trust card overlapping the bottom-right of the hero */
+.heroCard {
+  position: relative; z-index: 4;
+  margin: -44px 32px 0 auto;
+  max-width: 420px;
+  background: #fff; border: 1px solid var(--line-soft); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-float);
+  padding: 24px 26px;
+}
+.heroCardText { margin: 12px 0 0; font-size: 17px; line-height: 1.5; color: var(--text-heading); font-weight: 500; }
 
 .how { padding-top: 96px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: start; }
 .howBody { margin: 6px 0 0; color: var(--text-muted); font-size: 16.5px; line-height: 1.65; }
@@ -22,6 +85,16 @@
 @media (max-width: 900px) {
   .how { grid-template-columns: 1fr; gap: 24px; padding-top: 72px; }
   .serviceGrid { grid-template-columns: 1fr; }
-  .heroPhoto { height: 280px; }
   .statsBand { padding: 40px 28px; }
+  .hero { min-height: 540px; border-radius: var(--radius-lg); }
+  .heroInner { padding: 36px 24px 40px; }
+  .badge { width: 96px; height: 96px; top: 20px; right: 20px; }
+  .badgeArrow { width: 34px; height: 34px; padding: 8px; }
+  .heroCard { margin: -36px 16px 0; max-width: none; }
+  .heroActions { gap: 12px; }
+  .heroGhost { padding: 14px 22px; }
+}
+@media (max-width: 520px) {
+  .badge { display: none; }
+  .heroActions :global(a) { flex: 1 1 auto; }
 }

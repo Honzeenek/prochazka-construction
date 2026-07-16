@@ -23,17 +23,16 @@ export const metadata: Metadata = {
   },
 };
 
-const ICONS = 'construction,front_loader,local_shipping,call,mail,place,check,arrow_forward,menu,close,schedule';
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="cs" className={`${anton.variable} ${hanken.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          rel="stylesheet"
-          href={`https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0&icon_names=${ICONS}&display=block`}
+          rel="preload"
+          href="/fonts/material-symbols-rounded.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
       </head>
       <body>
