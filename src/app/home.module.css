@@ -1,0 +1,27 @@
+.heroWrap { padding-top: 8px; }
+.heroSheet { background: #fff; border-radius: var(--radius-xl) var(--radius-xl) 0 0; text-align: center; padding: 56px 24px 40px; }
+.heroTitle { font-size: var(--display-xl); max-width: 900px; margin: 0 auto; }
+.heroLead { max-width: 52ch; margin: 24px auto 0; font-size: var(--text-lg); color: var(--text-muted); }
+.heroActions { display: flex; gap: 14px; justify-content: center; margin-top: 32px; flex-wrap: wrap; }
+.heroPhoto { position: relative; height: 420px; border-radius: 0 0 var(--radius-xl) var(--radius-xl); overflow: hidden; }
+
+.how { padding-top: 96px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: start; }
+.howBody { margin: 6px 0 0; color: var(--text-muted); font-size: 16.5px; line-height: 1.65; }
+
+.services { padding-top: 72px; }
+.serviceGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.servicesCta { text-align: center; margin-top: 28px; }
+
+.statsWrap { margin-top: 96px; }
+.statsBand { background: var(--surface-ink); border-radius: var(--radius-xl); padding: 56px 64px; display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; }
+.statsLead { max-width: 420px; }
+.statsTitle { color: var(--text-on-ink); font-size: var(--display-md); }
+.statsText { color: var(--ink-300); margin-top: 14px; margin-bottom: 0; }
+.statsFigures { display: flex; gap: 56px; }
+
+@media (max-width: 900px) {
+  .how { grid-template-columns: 1fr; gap: 24px; padding-top: 72px; }
+  .serviceGrid { grid-template-columns: 1fr; }
+  .heroPhoto { height: 280px; }
+  .statsBand { padding: 40px 28px; }
+}
