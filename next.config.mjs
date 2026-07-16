@@ -1,17 +1,15 @@
+// basePath/assetPrefix are set only for the GitHub Pages build (project pages
+// live under /<repo>/). Local dev and root deploys leave it empty.
+const basePath = process.env.PAGES_BASE_PATH || '';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export', // static HTML export — deployable to GitHub Pages
+  trailingSlash: true, // emit /route/index.html so Pages serves clean URLs
   images: {
-    // real photos are downloaded into /public, so no remote patterns needed
+    unoptimized: true, // required for static export (no server image optimizer)
     formats: ['image/avif', 'image/webp'],
   },
-  // Allow the site to be embedded in an iframe (e.g. preview / aside browser).
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [{ key: 'Content-Security-Policy', value: 'frame-ancestors *' }],
-      },
-    ];
-  },
+  ...(basePath ? { basePath, assetPrefix: basePath } : {}),
 };
 export default nextConfig;

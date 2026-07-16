@@ -26,16 +26,9 @@ a:hover { color: var(--orange-600); }
 ::selection { background: var(--orange-200); }
 img { max-width: 100%; display: block; }
 
-/* Material Symbols Rounded — self-hosted subset (only the icons this site uses) */
-@font-face {
-  font-family: 'Material Symbols Rounded';
-  font-style: normal;
-  font-weight: 100 700;
-  font-display: block;
-  src: url('/fonts/material-symbols-rounded.woff2') format('woff2');
-}
+/* Material Symbols Rounded — self-hosted subset via next/font (--font-symbols) */
 .material-symbols-rounded {
-  font-family: 'Material Symbols Rounded';
+  font-family: var(--font-symbols), 'Material Symbols Rounded';
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
