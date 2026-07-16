@@ -1,0 +1,8 @@
+.wrap { font-family: var(--font-body); }
+.wrap[data-align='center'] { text-align: center; }
+.overline { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--text-heading); margin-bottom: 16px; }
+.wrap[data-align='center'] .overline { justify-content: center; }
+.marker { width: 8px; height: 8px; background: var(--brand); flex: none; }
+.title { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; line-height: .98; letter-spacing: .005em; color: var(--text-heading); font-size: var(--display-md); margin: 0; }
+.lead { margin: 18px 0 0; max-width: 54ch; color: var(--text-muted); font-size: 16px; line-height: 1.6; }
+.wrap[data-align='center'] .lead { margin-left: auto; margin-right: auto; }

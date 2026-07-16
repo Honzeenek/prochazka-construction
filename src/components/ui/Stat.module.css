@@ -1,0 +1,5 @@
+.stat { font-family: var(--font-body); }
+.value { font-family: var(--font-display); font-size: 44px; line-height: 1; color: var(--text-heading); text-transform: uppercase; }
+.label { margin-top: 8px; font-size: 13px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--text-muted); }
+.stat[data-ink='true'] .value { color: var(--text-on-ink); }
+.stat[data-ink='true'] .label { color: var(--ink-300); }

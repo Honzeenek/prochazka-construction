@@ -1,0 +1,2 @@
+.card { background: var(--surface-card); border: 1px solid var(--line-soft); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); font-family: var(--font-body); transition: box-shadow var(--dur-med) var(--ease-out), transform var(--dur-med) var(--ease-out); }
+.hoverable:hover { box-shadow: var(--shadow-float); transform: translateY(-2px); }

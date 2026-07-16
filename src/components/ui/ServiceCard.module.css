@@ -1,0 +1,8 @@
+.link { text-decoration: none; color: inherit; display: block; }
+.card { position: relative; height: 100%; }
+.iconTile { width: 52px; height: 52px; border-radius: 14px; background: var(--brand-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+.icon { color: var(--brand); }
+.title { font-size: 15px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--text-heading); margin-bottom: 8px; }
+.body { font-size: 14.5px; color: var(--text-muted); line-height: 1.55; }
+.more { position: absolute; top: 24px; right: 24px; color: var(--brand); opacity: 0; transition: opacity var(--dur-fast) var(--ease-out); display: inline-flex; }
+.link:hover .more { opacity: 1; }
