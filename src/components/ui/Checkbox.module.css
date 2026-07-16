@@ -1,0 +1,8 @@
+.wrap { display: inline-flex; align-items: flex-start; gap: 10px; cursor: pointer; font-family: var(--font-body); font-size: 14px; color: var(--text-body); }
+.input { position: absolute; opacity: 0; width: 0; height: 0; }
+.box { width: 20px; height: 20px; flex: none; border-radius: 5px; border: 1.5px solid var(--line-mid); background: #fff; display: flex; align-items: center; justify-content: center; transition: background var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out); margin-top: 1px; }
+.box svg { opacity: 0; }
+.input:checked + .box { background: var(--brand); border-color: var(--brand); }
+.input:checked + .box svg { opacity: 1; }
+.input:focus-visible + .box { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.text { margin-top: 0; }

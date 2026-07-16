@@ -1,0 +1,7 @@
+.field { display: block; }
+.label { display: block; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-heading); margin-bottom: 8px; font-family: var(--font-body); }
+.box { width: 100%; box-sizing: border-box; font-family: var(--font-body); font-size: 15px; color: var(--text-body); background: #fff; border: 1.5px solid var(--line-mid); border-radius: var(--radius-sm); padding: 13px 16px; outline: none; transition: border-color var(--dur-fast) var(--ease-out); }
+.box:focus { border-color: var(--focus-ring); }
+.box[data-error='true'] { border-color: var(--red-600); }
+.error { display: block; margin-top: 6px; font-size: 13px; color: var(--red-600); }
+.hint { display: block; margin-top: 6px; font-size: 13px; color: var(--text-faint); }
