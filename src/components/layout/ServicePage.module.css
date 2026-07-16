@@ -1,0 +1,31 @@
+.heroWrap { padding-top: 8px; }
+.heroSheet { background: #fff; border-radius: var(--radius-xl) var(--radius-xl) 0 0; padding: 56px 40px 40px; max-width: 780px; }
+.overline { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--text-heading); margin-bottom: 16px; }
+.marker { width: 8px; height: 8px; background: var(--brand); flex: none; display: inline-block; }
+.title { font-size: var(--display-lg); }
+.intro { max-width: 60ch; margin: 20px 0 0; font-size: var(--text-lg); color: var(--text-muted); line-height: 1.55; }
+.actions { display: flex; gap: 20px; align-items: center; margin-top: 32px; flex-wrap: wrap; }
+.phone { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; text-decoration: none; color: var(--ink-900); }
+.heroPhoto { position: relative; height: 440px; border-radius: 0 0 var(--radius-xl) var(--radius-xl); overflow: hidden; }
+
+.body { padding-top: 96px; }
+.bulletsHead { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; margin-bottom: 28px; }
+.bullets { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px 40px; }
+.bullet { display: flex; align-items: flex-start; gap: 12px; font-size: 16.5px; color: var(--text-body); line-height: 1.5; }
+.check { color: var(--brand); flex: none; margin-top: 1px; }
+
+.gallery { padding-top: 72px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.galleryItem { position: relative; aspect-ratio: 4 / 3; border-radius: var(--radius-lg); overflow: hidden; }
+
+.ctaWrap { margin-top: 96px; }
+.ctaBand { background: var(--surface-section); border: 1px solid var(--line-soft); border-radius: var(--radius-xl); padding: 56px 48px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.ctaTitle { font-size: var(--display-md); }
+
+@media (max-width: 900px) {
+  .heroSheet { padding: 40px 24px 32px; }
+  .heroPhoto { height: 280px; }
+  .body { padding-top: 64px; }
+  .bullets { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) { .gallery { grid-template-columns: 1fr; } }
