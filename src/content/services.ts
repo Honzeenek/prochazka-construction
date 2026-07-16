@@ -72,11 +72,3 @@ export const services: Service[] = [
 export function getService(slug: string): Service | undefined {
   return services.find((s) => s.slug === slug);
 }
-
-// Extra structured copy for the container page (process + volumes), used only there.
-export const containerExtras = {
-  processHeading: 'Jak to probíhá',
-  steps: ['Objednávka', 'Přistavení', 'Naplnění (3–7 dní)', 'Odvoz a likvidace'],
-  volumeHeading: 'Objem kontejnerů',
-  volumeNote: 'Kontejnery od 3 m³ do 17 m³ — vybereme velikost podle množství suti.',
-} as const;

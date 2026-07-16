@@ -1,7 +1,7 @@
-import type { InputHTMLAttributes } from 'react';
+import type { InputHTMLAttributes, ReactNode } from 'react';
 import styles from './Checkbox.module.css';
 
-type Props = { label: string } & InputHTMLAttributes<HTMLInputElement>;
+type Props = { label: ReactNode } & InputHTMLAttributes<HTMLInputElement>;
 export function Checkbox({ label, className, ...rest }: Props) {
   return (
     <label className={styles.wrap}>

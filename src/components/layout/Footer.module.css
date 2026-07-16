@@ -54,15 +54,41 @@
 }
 
 .baselineInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   padding-top: 18px;
   padding-bottom: 18px;
   font-size: 12.5px;
   color: var(--ink-300);
 }
 
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.legalLink {
+  color: var(--ink-300);
+  text-decoration: none;
+  font-size: 12.5px;
+}
+
+.legalLink:hover {
+  color: var(--orange-300);
+}
+
 @media (max-width: 720px) {
   .grid {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .baselineInner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

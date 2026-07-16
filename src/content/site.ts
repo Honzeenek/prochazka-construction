@@ -4,7 +4,6 @@ export const site = {
   phone: '+420 777 119 179',
   phoneHref: 'tel:+420777119179',
   email: 'info@stavbyprochazka.cz',
-  location: 'Chřibská',
   region: 'České Švýcarsko a okolí',
   foundedYear: 1988,
   projectsDone: '1 800+',

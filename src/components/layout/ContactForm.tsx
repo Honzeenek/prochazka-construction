@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Field';
 import { Textarea } from '@/components/ui/Textarea';
@@ -58,7 +59,7 @@ export function ContactForm() {
       <div className={styles.full}><Input label="E-mail (nepovinné)" name="email" type="email" placeholder="vas@email.cz" error={errors.email} /></div>
       <div className={styles.full}><Select label="Typ práce" name="type" options={TYPES} /></div>
       <div className={styles.full}><Textarea label="Popis zakázky" name="message" rows={4} placeholder="Co potřebujete postavit nebo vykopat?" error={errors.message} /></div>
-      <div className={styles.full}><Checkbox label="Souhlasím se zpracováním osobních údajů" name="gdpr" />{errors.gdpr && <span className={styles.err}>{errors.gdpr}</span>}</div>
+      <div className={styles.full}><Checkbox label={<>Souhlasím se zpracováním <Link href="/ochrana-osobnich-udaju">osobních údajů</Link></>} name="gdpr" />{errors.gdpr && <span className={styles.err}>{errors.gdpr}</span>}</div>
       <div className={styles.full}><Button size="lg" type="submit" disabled={busy} className={styles.submit}>{busy ? 'Odesílám…' : 'Odeslat poptávku'}</Button></div>
     </form>
   );

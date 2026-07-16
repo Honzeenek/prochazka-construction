@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Wordmark } from './Wordmark';
 import { site, nav } from '@/content/site';
+import { legalPages } from '@/content/legal';
 import styles from './Footer.module.css';
 
 export function Footer() {
@@ -35,7 +36,16 @@ export function Footer() {
         </div>
       </div>
       <div className={styles.baseline}>
-        <div className={`container ${styles.baselineInner}`}>© {site.foundedYear ? new Date().getFullYear() : ''} Procházka — stavební a zemní práce</div>
+        <div className={`container ${styles.baselineInner}`}>
+          <span>© {site.foundedYear ? new Date().getFullYear() : ''} Procházka — stavební a zemní práce</span>
+          <div className={styles.legal}>
+            {legalPages.map((p) => (
+              <Link key={p.slug} href={`/${p.slug}`} className={styles.legalLink}>
+                {p.title}
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </footer>
   );

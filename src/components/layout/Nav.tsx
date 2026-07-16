@@ -26,6 +26,7 @@ export function Nav() {
               href={l.href}
               className={styles.link}
               data-active={pathname === l.href ? 'true' : undefined}
+              aria-current={pathname === l.href ? 'page' : undefined}
             >
               {l.label}
             </Link>
@@ -54,6 +55,7 @@ export function Nav() {
               href={l.href}
               className={styles.panelLink}
               data-active={pathname === l.href ? 'true' : undefined}
+              aria-current={pathname === l.href ? 'page' : undefined}
               onClick={() => setOpen(false)}
             >
               {l.label}
