@@ -1,0 +1,8 @@
+.form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.full { grid-column: 1 / -1; }
+.submit { width: 100%; }
+.err { display: block; margin-top: 6px; font-size: 13px; color: var(--red-600); }
+.success { text-align: center; padding: 48px 16px; }
+.successTitle { font-size: 28px; }
+.successText { color: var(--text-muted); margin: 12px 0 24px; }
+@media (max-width: 560px) { .form { grid-template-columns: 1fr; } }

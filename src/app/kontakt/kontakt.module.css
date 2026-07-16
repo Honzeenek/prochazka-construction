@@ -1,0 +1,7 @@
+.wrap { padding-top: 40px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: start; }
+.info { padding-top: 8px; }
+.details { display: flex; flex-direction: column; gap: 18px; margin-top: 36px; }
+.row { display: flex; gap: 14px; align-items: center; text-decoration: none; color: var(--ink-900); }
+.rowIcon { color: var(--brand); flex: none; }
+.rowLabel { display: block; font-size: 12px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px; }
+@media (max-width: 860px) { .wrap { grid-template-columns: 1fr; gap: 32px; } }
